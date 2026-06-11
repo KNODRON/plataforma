@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Plataforma de Análisis Criminal Estratégico</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <section id="loginView" class="login-view">
+    <div class="login-overlay"></div>
+    <article class="login-card">
+      <div class="shield">OS.9</div>
+      <p class="eyebrow">Departamento OS.9 · Análisis e Inteligencia Criminal</p>
+      <h1>Plataforma de Análisis Criminal Estratégico</h1>
+      <p class="muted">Maqueta funcional con guardado local para revisión interna.</p>
+      <label>Usuario</label>
+      <input id="userInput" type="text" placeholder="usuario.institucional" />
+      <label>Contraseña</label>
+      <input type="password" placeholder="••••••••" />
+      <button id="loginBtn" class="primary">Ingresar</button>
+      <small>Acceso simulado para maqueta. No usar datos sensibles reales.</small>
+    </article>
+  </section>
+
+  <main id="appView" class="app hidden">
+    <aside class="sidebar">
+      <div class="brand"><div class="shield small">OS.9</div><div><strong>Análisis Criminal</strong><span>Panel Estratégico</span></div></div>
+      <nav id="moduleNav"></nav>
+      <button id="logoutBtn" class="ghost">Cerrar maqueta</button>
+    </aside>
+
+    <section class="workspace">
+      <header class="topbar">
+        <div><p class="eyebrow">Módulo activo</p><h2 id="moduleTitle">Secuestro</h2></div>
+        <div class="actions"><button id="saveBtn">Guardar local</button><button id="exportBtn">Exportar JSON</button><button id="clearBtn" class="danger">Limpiar</button></div>
+      </header>
+
+      <section class="stats-grid">
+        <article><span>Casos locales</span><strong id="caseCount">0</strong></article>
+        <article><span>Último guardado</span><strong id="lastSaved">Sin registro</strong></article>
+        <article><span>Estado</span><strong>Maqueta</strong></article>
+      </section>
+
+      <section id="dashboard" class="module-grid"></section>
+      <form id="caseForm" class="form-shell hidden"></form>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

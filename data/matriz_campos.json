@@ -1,0 +1,932 @@
+{
+  "modules": [
+    "Secuestro",
+    "Robos",
+    "Homicidios",
+    "Medio Ambiente",
+    "Drogas",
+    "Crimen Organizado"
+  ],
+  "sections": [
+    {
+      "id": "control-interno",
+      "title": "CONTROL INTERNO",
+      "fields": [
+        {
+          "id": "control-interno-n",
+          "label": "N°",
+          "type": "number"
+        }
+      ]
+    },
+    {
+      "id": "antecedentes-investigaci-n",
+      "title": "ANTECEDENTES INVESTIGACIÓN",
+      "fields": [
+        {
+          "id": "antecedentes-investigaci-n-tipo-procedimiento",
+          "label": "TIPO PROCEDIMIENTO",
+          "type": "text"
+        },
+        {
+          "id": "antecedentes-investigaci-n-delito",
+          "label": "DELITO",
+          "type": "text"
+        },
+        {
+          "id": "antecedentes-investigaci-n-ruc",
+          "label": "RUC",
+          "type": "text"
+        },
+        {
+          "id": "antecedentes-investigaci-n-n-folio",
+          "label": "N°FOLIO",
+          "type": "number"
+        },
+        {
+          "id": "antecedentes-investigaci-n-fiscalia",
+          "label": "FISCALIA",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "id": "fecha-y-hora-denuncia",
+      "title": "FECHA Y HORA DENUNCIA",
+      "fields": [
+        {
+          "id": "fecha-y-hora-denuncia-dia",
+          "label": "DIA",
+          "type": "text"
+        },
+        {
+          "id": "fecha-y-hora-denuncia-mes",
+          "label": "MES",
+          "type": "text"
+        },
+        {
+          "id": "fecha-y-hora-denuncia-a-o",
+          "label": "AÑO",
+          "type": "text"
+        },
+        {
+          "id": "fecha-y-hora-denuncia-hora",
+          "label": "HORA",
+          "type": "time"
+        }
+      ]
+    },
+    {
+      "id": "sitio-del-suceso-denuncia",
+      "title": "SITIO DEL SUCESO DENUNCIA",
+      "fields": [
+        {
+          "id": "sitio-del-suceso-denuncia-lugar-de-ocurrencia",
+          "label": "LUGAR DE OCURRENCIA",
+          "type": "textarea"
+        },
+        {
+          "id": "sitio-del-suceso-denuncia-direccion",
+          "label": "DIRECCION",
+          "type": "textarea"
+        },
+        {
+          "id": "sitio-del-suceso-denuncia-comuna",
+          "label": "COMUNA",
+          "type": "text"
+        },
+        {
+          "id": "sitio-del-suceso-denuncia-region",
+          "label": "REGION",
+          "type": "text"
+        },
+        {
+          "id": "sitio-del-suceso-denuncia-latitud",
+          "label": "LATITUD",
+          "type": "number"
+        },
+        {
+          "id": "sitio-del-suceso-denuncia-longitud",
+          "label": "LONGITUD",
+          "type": "number"
+        }
+      ]
+    },
+    {
+      "id": "victima",
+      "title": "VICTIMA",
+      "fields": [
+        {
+          "id": "victima-nombre-1",
+          "label": "NOMBRE 1",
+          "type": "text"
+        },
+        {
+          "id": "victima-nombre-2",
+          "label": "NOMBRE 2",
+          "type": "text"
+        },
+        {
+          "id": "victima-apellido-1",
+          "label": "APELLIDO 1",
+          "type": "text"
+        },
+        {
+          "id": "victima-apellido-2",
+          "label": "APELLIDO 2",
+          "type": "text"
+        },
+        {
+          "id": "victima-run",
+          "label": "RUN",
+          "type": "text"
+        },
+        {
+          "id": "victima-dni",
+          "label": "DNI",
+          "type": "text"
+        },
+        {
+          "id": "victima-nacionalidad",
+          "label": "NACIONALIDAD",
+          "type": "text"
+        },
+        {
+          "id": "victima-situacion-migratoria",
+          "label": "SITUACION MIGRATORIA",
+          "type": "text"
+        },
+        {
+          "id": "victima-edad",
+          "label": "EDAD",
+          "type": "number"
+        },
+        {
+          "id": "victima-rango-etario",
+          "label": "RANGO ETARIO",
+          "type": "text"
+        },
+        {
+          "id": "victima-fecha-nac",
+          "label": "FECHA NAC.",
+          "type": "text"
+        },
+        {
+          "id": "victima-ocupaci-n",
+          "label": "OCUPACIÓN",
+          "type": "text"
+        },
+        {
+          "id": "victima-estudios",
+          "label": "ESTUDIOS",
+          "type": "text"
+        },
+        {
+          "id": "victima-telefono",
+          "label": "TELEFONO",
+          "type": "text"
+        },
+        {
+          "id": "victima-redes-sociales",
+          "label": "REDES SOCIALES",
+          "type": "text"
+        },
+        {
+          "id": "victima-perfil",
+          "label": "PERFIL",
+          "type": "text"
+        },
+        {
+          "id": "victima-estado-civil",
+          "label": "ESTADO CIVIL",
+          "type": "text"
+        },
+        {
+          "id": "victima-direcci-n",
+          "label": "DIRECCIÓN",
+          "type": "text"
+        },
+        {
+          "id": "victima-comuna",
+          "label": "COMUNA",
+          "type": "text"
+        },
+        {
+          "id": "victima-regi-n",
+          "label": "REGIÓN",
+          "type": "text"
+        },
+        {
+          "id": "victima-antepen",
+          "label": "ANTEPEN",
+          "type": "text"
+        },
+        {
+          "id": "victima-vinculo-criminal",
+          "label": "VINCULO CRIMINAL",
+          "type": "text"
+        },
+        {
+          "id": "victima-perfil-crimonologico",
+          "label": "PERFIL CRIMONOLOGICO",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "id": "imputado-detenido",
+      "title": "IMPUTADO / DETENIDO",
+      "fields": [
+        {
+          "id": "imputado-detenido-calidad",
+          "label": "CALIDAD",
+          "type": "text"
+        },
+        {
+          "id": "imputado-detenido-alerta-interpol",
+          "label": "ALERTA INTERPOL",
+          "type": "text"
+        },
+        {
+          "id": "imputado-detenido-jerarquia",
+          "label": "JERARQUIA",
+          "type": "text"
+        },
+        {
+          "id": "imputado-detenido-rol",
+          "label": "ROL",
+          "type": "text"
+        },
+        {
+          "id": "imputado-detenido-nombre-1",
+          "label": "NOMBRE 1",
+          "type": "text"
+        },
+        {
+          "id": "imputado-detenido-nombre-2",
+          "label": "NOMBRE 2",
+          "type": "text"
+        },
+        {
+          "id": "imputado-detenido-apellido-1",
+          "label": "APELLIDO 1",
+          "type": "text"
+        },
+        {
+          "id": "imputado-detenido-apellido-2",
+          "label": "APELLIDO 2",
+          "type": "text"
+        },
+        {
+          "id": "imputado-detenido-run",
+          "label": "RUN",
+          "type": "text"
+        },
+        {
+          "id": "imputado-detenido-dni",
+          "label": "DNI",
+          "type": "text"
+        },
+        {
+          "id": "imputado-detenido-nacionalidad",
+          "label": "NACIONALIDAD",
+          "type": "text"
+        },
+        {
+          "id": "imputado-detenido-situacion-migratoria",
+          "label": "SITUACION MIGRATORIA",
+          "type": "text"
+        },
+        {
+          "id": "imputado-detenido-edad",
+          "label": "EDAD",
+          "type": "number"
+        },
+        {
+          "id": "imputado-detenido-fecha-nac",
+          "label": "FECHA NAC.",
+          "type": "text"
+        },
+        {
+          "id": "imputado-detenido-estudios",
+          "label": "ESTUDIOS",
+          "type": "text"
+        },
+        {
+          "id": "imputado-detenido-telefono",
+          "label": "TELEFONO",
+          "type": "text"
+        },
+        {
+          "id": "imputado-detenido-redes-sociales",
+          "label": "REDES SOCIALES",
+          "type": "text"
+        },
+        {
+          "id": "imputado-detenido-perfil",
+          "label": "PERFIL",
+          "type": "text"
+        },
+        {
+          "id": "imputado-detenido-estado-civil",
+          "label": "ESTADO CIVIL",
+          "type": "text"
+        },
+        {
+          "id": "imputado-detenido-direcci-n",
+          "label": "DIRECCIÓN",
+          "type": "text"
+        },
+        {
+          "id": "imputado-detenido-comuna",
+          "label": "COMUNA",
+          "type": "text"
+        },
+        {
+          "id": "imputado-detenido-regi-n",
+          "label": "REGIÓN",
+          "type": "text"
+        },
+        {
+          "id": "imputado-detenido-antepen",
+          "label": "ANTEPEN",
+          "type": "text"
+        },
+        {
+          "id": "imputado-detenido-mercado-ilicito",
+          "label": "MERCADO ILICITO",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "id": "organizaci-n-criminal",
+      "title": "ORGANIZACIÓN CRIMINAL",
+      "fields": [
+        {
+          "id": "organizaci-n-criminal-organizaci-n",
+          "label": "ORGANIZACIÓN",
+          "type": "text"
+        },
+        {
+          "id": "organizaci-n-criminal-nivel-riesgo",
+          "label": "NIVEL RIESGO",
+          "type": "text"
+        },
+        {
+          "id": "organizaci-n-criminal-denominacion",
+          "label": "DENOMINACION",
+          "type": "text"
+        },
+        {
+          "id": "organizaci-n-criminal-pais-origen",
+          "label": "PAIS ORIGEN",
+          "type": "text"
+        },
+        {
+          "id": "organizaci-n-criminal-tipo-de-organizaci-n",
+          "label": "TIPO DE ORGANIZACIÓN",
+          "type": "text"
+        },
+        {
+          "id": "organizaci-n-criminal-capacidad-financiera",
+          "label": "CAPACIDAD FINANCIERA",
+          "type": "text"
+        },
+        {
+          "id": "organizaci-n-criminal-capacidad-armada",
+          "label": "CAPACIDAD ARMADA",
+          "type": "text"
+        },
+        {
+          "id": "organizaci-n-criminal-mercado-ilicito-principal",
+          "label": "MERCADO ILICITO PRINCIPAL",
+          "type": "text"
+        },
+        {
+          "id": "organizaci-n-criminal-mercado-ilicito-secundario",
+          "label": "MERCADO ILICITO SECUNDARIO",
+          "type": "text"
+        },
+        {
+          "id": "organizaci-n-criminal-alcance-territorial",
+          "label": "ALCANCE TERRITORIAL",
+          "type": "text"
+        },
+        {
+          "id": "organizaci-n-criminal-car-cter-trasnacional",
+          "label": "CARÁCTER TRASNACIONAL",
+          "type": "text"
+        },
+        {
+          "id": "organizaci-n-criminal-paises-vinculados",
+          "label": "PAISES VINCULADOS",
+          "type": "text"
+        },
+        {
+          "id": "organizaci-n-criminal-organizaci-n-asociada",
+          "label": "ORGANIZACIÓN ASOCIADA",
+          "type": "text"
+        },
+        {
+          "id": "organizaci-n-criminal-organizaci-n-rival",
+          "label": "ORGANIZACIÓN RIVAL",
+          "type": "text"
+        },
+        {
+          "id": "organizaci-n-criminal-estado-organizaci-n",
+          "label": "ESTADO ORGANIZACIÓN",
+          "type": "text"
+        },
+        {
+          "id": "organizaci-n-criminal-a-o-detecci-n",
+          "label": "AÑO DETECCIÓN",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "id": "delito",
+      "title": "DELITO",
+      "fields": [
+        {
+          "id": "delito-corresponde",
+          "label": "CORRESPONDE",
+          "type": "text"
+        },
+        {
+          "id": "delito-delito-corregido",
+          "label": "DELITO CORREGIDO",
+          "type": "text"
+        },
+        {
+          "id": "delito-tipo-secuestro",
+          "label": "TIPO SECUESTRO",
+          "type": "text"
+        },
+        {
+          "id": "delito-motivacion",
+          "label": "MOTIVACION",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "id": "armamento",
+      "title": "ARMAMENTO",
+      "fields": [
+        {
+          "id": "armamento-arma",
+          "label": "ARMA",
+          "type": "text"
+        },
+        {
+          "id": "armamento-encargo",
+          "label": "ENCARGO",
+          "type": "text"
+        },
+        {
+          "id": "armamento-nombre-propietario",
+          "label": "NOMBRE PROPIETARIO",
+          "type": "text"
+        },
+        {
+          "id": "armamento-apellido-1",
+          "label": "APELLIDO 1",
+          "type": "text"
+        },
+        {
+          "id": "armamento-apellido-2",
+          "label": "APELLIDO 2",
+          "type": "text"
+        },
+        {
+          "id": "armamento-rut",
+          "label": "RUT",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "id": "medio-transporte",
+      "title": "MEDIO TRANSPORTE",
+      "fields": [
+        {
+          "id": "medio-transporte-medio-transporte",
+          "label": "MEDIO TRANSPORTE",
+          "type": "text"
+        },
+        {
+          "id": "medio-transporte-ppu",
+          "label": "PPU",
+          "type": "text"
+        },
+        {
+          "id": "medio-transporte-marca",
+          "label": "MARCA",
+          "type": "text"
+        },
+        {
+          "id": "medio-transporte-modelo",
+          "label": "MODELO",
+          "type": "text"
+        },
+        {
+          "id": "medio-transporte-color",
+          "label": "COLOR",
+          "type": "text"
+        },
+        {
+          "id": "medio-transporte-encargo",
+          "label": "ENCARGO",
+          "type": "text"
+        },
+        {
+          "id": "medio-transporte-nombre",
+          "label": "NOMBRE",
+          "type": "text"
+        },
+        {
+          "id": "medio-transporte-apellido-1",
+          "label": "APELLIDO 1",
+          "type": "text"
+        },
+        {
+          "id": "medio-transporte-apellido-2",
+          "label": "APELLIDO 2",
+          "type": "text"
+        },
+        {
+          "id": "medio-transporte-rut",
+          "label": "RUT",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "id": "sitio-del-suceso-determinado",
+      "title": "SITIO DEL SUCESO DETERMINADO",
+      "fields": [
+        {
+          "id": "sitio-del-suceso-determinado-fecha-captura",
+          "label": "FECHA CAPTURA",
+          "type": "text"
+        },
+        {
+          "id": "sitio-del-suceso-determinado-hora-captura",
+          "label": "HORA CAPTURA",
+          "type": "time"
+        },
+        {
+          "id": "sitio-del-suceso-determinado-direccion-captura",
+          "label": "DIRECCION CAPTURA",
+          "type": "textarea"
+        },
+        {
+          "id": "sitio-del-suceso-determinado-comuna-captura",
+          "label": "COMUNA CAPTURA",
+          "type": "text"
+        },
+        {
+          "id": "sitio-del-suceso-determinado-region-captura",
+          "label": "REGION CAPTURA",
+          "type": "text"
+        },
+        {
+          "id": "sitio-del-suceso-determinado-sector-jurisdiccional",
+          "label": "SECTOR JURISDICCIONAL",
+          "type": "text"
+        },
+        {
+          "id": "sitio-del-suceso-determinado-latitud",
+          "label": "LATITUD",
+          "type": "number"
+        },
+        {
+          "id": "sitio-del-suceso-determinado-longitud",
+          "label": "LONGITUD",
+          "type": "number"
+        },
+        {
+          "id": "sitio-del-suceso-determinado-fecha-cautiverio",
+          "label": "FECHA CAUTIVERIO",
+          "type": "text"
+        },
+        {
+          "id": "sitio-del-suceso-determinado-hora-cautiverio",
+          "label": "HORA CAUTIVERIO",
+          "type": "time"
+        },
+        {
+          "id": "sitio-del-suceso-determinado-direccion-cautiverio",
+          "label": "DIRECCION CAUTIVERIO",
+          "type": "textarea"
+        },
+        {
+          "id": "sitio-del-suceso-determinado-comuna-cautiverio",
+          "label": "COMUNA CAUTIVERIO",
+          "type": "text"
+        },
+        {
+          "id": "sitio-del-suceso-determinado-region-cautiverio",
+          "label": "REGION CAUTIVERIO",
+          "type": "text"
+        },
+        {
+          "id": "sitio-del-suceso-determinado-sector-jurisdiccional",
+          "label": "SECTOR JURISDICCIONAL",
+          "type": "text"
+        },
+        {
+          "id": "sitio-del-suceso-determinado-latitud",
+          "label": "LATITUD",
+          "type": "number"
+        },
+        {
+          "id": "sitio-del-suceso-determinado-longitud",
+          "label": "LONGITUD",
+          "type": "number"
+        },
+        {
+          "id": "sitio-del-suceso-determinado-fecha-liberacion",
+          "label": "FECHA LIBERACION",
+          "type": "text"
+        },
+        {
+          "id": "sitio-del-suceso-determinado-hora-liberacion",
+          "label": "HORA LIBERACION",
+          "type": "time"
+        },
+        {
+          "id": "sitio-del-suceso-determinado-direccion-liberacion",
+          "label": "DIRECCION LIBERACION",
+          "type": "textarea"
+        },
+        {
+          "id": "sitio-del-suceso-determinado-comuna-liberacion",
+          "label": "COMUNA LIBERACION",
+          "type": "text"
+        },
+        {
+          "id": "sitio-del-suceso-determinado-region-liberacion",
+          "label": "REGION LIBERACION",
+          "type": "text"
+        },
+        {
+          "id": "sitio-del-suceso-determinado-sector-jurisdiccional",
+          "label": "SECTOR JURISDICCIONAL",
+          "type": "text"
+        },
+        {
+          "id": "sitio-del-suceso-determinado-latitud",
+          "label": "LATITUD",
+          "type": "number"
+        },
+        {
+          "id": "sitio-del-suceso-determinado-longitud",
+          "label": "LONGITUD",
+          "type": "number"
+        }
+      ]
+    },
+    {
+      "id": "rubro-pago-liberacion",
+      "title": "RUBRO PAGO LIBERACION",
+      "fields": [
+        {
+          "id": "rubro-pago-liberacion-extorsion",
+          "label": "EXTORSION",
+          "type": "text"
+        },
+        {
+          "id": "rubro-pago-liberacion-medio-utilizado",
+          "label": "MEDIO UTILIZADO",
+          "type": "text"
+        },
+        {
+          "id": "rubro-pago-liberacion-fono",
+          "label": "FONO",
+          "type": "text"
+        },
+        {
+          "id": "rubro-pago-liberacion-pago-realizado",
+          "label": "PAGO REALIZADO",
+          "type": "text"
+        },
+        {
+          "id": "rubro-pago-liberacion-cantidad-kilos",
+          "label": "CANTIDAD (KILOS)",
+          "type": "text"
+        },
+        {
+          "id": "rubro-pago-liberacion-drogas",
+          "label": "DROGAS",
+          "type": "text"
+        },
+        {
+          "id": "rubro-pago-liberacion-denominacion",
+          "label": "DENOMINACION",
+          "type": "text"
+        },
+        {
+          "id": "rubro-pago-liberacion-cantidad",
+          "label": "CANTIDAD",
+          "type": "text"
+        },
+        {
+          "id": "rubro-pago-liberacion-criptomonedas",
+          "label": "CRIPTOMONEDAS",
+          "type": "text"
+        },
+        {
+          "id": "rubro-pago-liberacion-cantidad",
+          "label": "CANTIDAD",
+          "type": "text"
+        },
+        {
+          "id": "rubro-pago-liberacion-transferencia",
+          "label": "TRANSFERENCIA",
+          "type": "text"
+        },
+        {
+          "id": "rubro-pago-liberacion-banco",
+          "label": "BANCO",
+          "type": "text"
+        },
+        {
+          "id": "rubro-pago-liberacion-cuenta",
+          "label": "CUENTA",
+          "type": "text"
+        },
+        {
+          "id": "rubro-pago-liberacion-cuenta",
+          "label": "CUENTA",
+          "type": "text"
+        },
+        {
+          "id": "rubro-pago-liberacion-titular",
+          "label": "TITULAR",
+          "type": "text"
+        },
+        {
+          "id": "rubro-pago-liberacion-run-dni",
+          "label": "RUN / DNI",
+          "type": "text"
+        },
+        {
+          "id": "rubro-pago-liberacion-antepen",
+          "label": "ANTEPEN",
+          "type": "text"
+        },
+        {
+          "id": "rubro-pago-liberacion-antepen",
+          "label": "ANTEPEN",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "id": "modus-operandi",
+      "title": "MODUS OPERANDI",
+      "fields": [
+        {
+          "id": "modus-operandi-principal",
+          "label": "PRINCIPAL",
+          "type": "text"
+        },
+        {
+          "id": "modus-operandi-descripcion",
+          "label": "DESCRIPCION",
+          "type": "textarea"
+        }
+      ]
+    },
+    {
+      "id": "resultados",
+      "title": "RESULTADOS",
+      "fields": [
+        {
+          "id": "resultados-victima",
+          "label": "VICTIMA",
+          "type": "text"
+        },
+        {
+          "id": "resultados-condiciones-victima",
+          "label": "CONDICIONES VICTIMA",
+          "type": "text"
+        },
+        {
+          "id": "resultados-allanamiento",
+          "label": "ALLANAMIENTO",
+          "type": "text"
+        },
+        {
+          "id": "resultados-drogas",
+          "label": "DROGAS",
+          "type": "text"
+        },
+        {
+          "id": "resultados-tipo",
+          "label": "TIPO",
+          "type": "text"
+        },
+        {
+          "id": "resultados-arma",
+          "label": "ARMA",
+          "type": "text"
+        },
+        {
+          "id": "resultados-encargo",
+          "label": "ENCARGO",
+          "type": "text"
+        },
+        {
+          "id": "resultados-nombre-propietario",
+          "label": "NOMBRE PROPIETARIO",
+          "type": "text"
+        },
+        {
+          "id": "resultados-apellido-1",
+          "label": "APELLIDO 1",
+          "type": "text"
+        },
+        {
+          "id": "resultados-apellido-2",
+          "label": "APELLIDO 2",
+          "type": "text"
+        },
+        {
+          "id": "resultados-rut",
+          "label": "RUT",
+          "type": "text"
+        },
+        {
+          "id": "resultados-cantidad-kgs",
+          "label": "CANTIDAD (KGS)",
+          "type": "text"
+        },
+        {
+          "id": "resultados-dinero",
+          "label": "DINERO",
+          "type": "text"
+        },
+        {
+          "id": "resultados-cantidad",
+          "label": "CANTIDAD",
+          "type": "text"
+        },
+        {
+          "id": "resultados-denominaci-n",
+          "label": "DENOMINACIÓN",
+          "type": "text"
+        },
+        {
+          "id": "resultados-bienes-muebles",
+          "label": "BIENES MUEBLES",
+          "type": "text"
+        },
+        {
+          "id": "resultados-tipo",
+          "label": "TIPO",
+          "type": "text"
+        },
+        {
+          "id": "resultados-avaluo-unidad",
+          "label": "AVALUO UNIDAD",
+          "type": "text"
+        },
+        {
+          "id": "resultados-avaluo-total",
+          "label": "AVALUO TOTAL",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "id": "evaluacion-estrategica",
+      "title": "EVALUACION ESTRATEGICA",
+      "fields": [
+        {
+          "id": "evaluacion-estrategica-fenomeno-principal",
+          "label": "FENOMENO PRINCIPAL",
+          "type": "text"
+        },
+        {
+          "id": "evaluacion-estrategica-fenomenos-asociados",
+          "label": "FENOMENOS ASOCIADOS",
+          "type": "text"
+        },
+        {
+          "id": "evaluacion-estrategica-amenazas-estrategicas",
+          "label": "AMENAZAS ESTRATEGICAS",
+          "type": "text"
+        },
+        {
+          "id": "evaluacion-estrategica-prioridad",
+          "label": "PRIORIDAD",
+          "type": "text"
+        }
+      ]
+    }
+  ]
+}
