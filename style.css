@@ -35,3 +35,20 @@ button,input,select,textarea{font:inherit}
 }
 .field select.select-field:invalid{color:#62746b}
 .section[open] summary{border-bottom:1px solid var(--line)}
+
+/* V6: perfiles simulados y flujo de concurrencias */
+.login-card select{width:100%;height:38px;border:1px solid var(--line);border-radius:10px;padding:0 10px;background:#fff}
+.login-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.profile-box{border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.08);border-radius:14px;padding:10px 12px;color:#fff}
+.profile-box span{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.08em;opacity:.78;margin-bottom:3px}
+.profile-box strong{display:block;font-size:14px}
+.technical-action{opacity:.76}
+.records-list{display:grid;gap:10px}
+.record-card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 16px;display:flex;align-items:center;justify-content:space-between;gap:12px;box-shadow:0 8px 22px rgba(0,40,25,.05)}
+.record-card strong{display:block;font-size:15px;color:#113528;margin-bottom:4px}
+.record-card span{display:block;color:var(--muted);font-size:12px;font-weight:700}
+.record-card p{margin:7px 0 0;color:#273a32}
+.record-actions{display:flex;align-items:center;gap:8px;flex-wrap:wrap;justify-content:flex-end}
+.record-actions button{height:34px;border:0;border-radius:9px;background:var(--green-700);color:#fff;font-weight:800;padding:0 12px;cursor:pointer}
+.mini-pill{display:inline-flex!important;align-items:center;height:28px;border-radius:999px;padding:0 10px;background:#e8f5ee;color:var(--green-700)!important;font-size:11px!important;font-weight:900!important;white-space:nowrap}
+@media(max-width:760px){.login-grid{grid-template-columns:1fr}.record-card{align-items:flex-start;flex-direction:column}.record-actions{justify-content:flex-start}}
