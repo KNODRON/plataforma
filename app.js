@@ -1,9 +1,9 @@
 const state = { module: 'Secuestro', schema: null };
-const storageKey = 'os9_sace_secuestro_borrador_v4';
+const storageKey = 'os9_sace_secuestro_borrador_v5';
 const $ = s => document.querySelector(s);
 
 async function init() {
-  state.schema = await fetch('data/matriz_campos.json').then(r => r.json());
+  state.schema = await fetch('data/matriz_campos.json?v=5').then(r => r.json());
 
   $('#loginBtn').onclick = () => {
     $('#loginView').classList.add('hidden');
@@ -106,19 +106,42 @@ function showForm() {
   loadDraft();
 }
 
+const SELECT_OPTIONS = {
+  'TIPO PROCEDIMIENTO': ['CONCURRENCIA', 'ORDEN DE INVESTIGAR', 'FLAGRANCIA', 'DENUNCIA', 'DETENCIÓN', 'ALLANAMIENTO', 'OTRO'],
+  'DELITO': ['SECUESTRO', 'SECUESTRO EXTORSIVO', 'ROBO CON RETENCIÓN', 'EXTORSIÓN', 'OTRO'],
+  'FISCALIA': ['FISCALÍA REGIONAL METROPOLITANA CENTRO NORTE', 'FISCALÍA REGIONAL METROPOLITANA ORIENTE', 'FISCALÍA REGIONAL METROPOLITANA OCCIDENTE', 'FISCALÍA REGIONAL METROPOLITANA SUR', 'OTRA'],
+  'SEXO': ['MASCULINO', 'FEMENINO', 'NO INFORMADO'],
+  'NACIONALIDAD': ['CHILENA', 'VENEZOLANA', 'COLOMBIANA', 'PERUANA', 'BOLIVIANA', 'HAITIANA', 'OTRA'],
+  'ESTADO CIVIL': ['SOLTERO', 'CASADO', 'DIVORCIADO', 'VIUDO', 'AUC', 'NO INFORMADO'],
+  'MAYOR/MENOR': ['MAYOR DE EDAD', 'MENOR DE EDAD', 'NO INFORMADO'],
+  'CALIDAD': ['DETENIDO', 'IMPUTADO', 'PRÓFUGO', 'TESTIGO', 'VÍCTIMA', 'OTRO']
+};
+
 function fieldHtml(f) {
+  const label = normalizeLabel(f.label);
+  const options = SELECT_OPTIONS[label] || (f.type === 'select' && Array.isArray(f.options) ? f.options : null);
   const full = f.type === 'textarea' || longField(f.label) ? ' full' : '';
-  const required = ['RUC', 'N°FOLIO', 'FISCALIA', 'TIPO PROCEDIMIENTO'].includes(f.label) ? '<span class="required">*</span>' : '';
+  const required = ['RUC', 'N°FOLIO', 'FISCALIA', 'FISCALÍA', 'TIPO PROCEDIMIENTO'].includes(label) ? '<span class="required">*</span>' : '';
+
   if (f.type === 'textarea') {
-    return `<div class="field${full}"><label>${f.label}${required}</label><textarea name="${f.id}" rows="3"></textarea></div>`;
+    return `<div class="field${full}"><label for="${f.id}">${f.label}${required}</label><textarea id="${f.id}" name="${f.id}" rows="3"></textarea></div>`;
   }
-  if (f.type === 'select' && Array.isArray(f.options)) {
-    return `<div class="field${full}"><label>${f.label}${required}</label><select name="${f.id}">
+
+  if (options) {
+    return `<div class="field${full}"><label for="${f.id}">${f.label}${required}</label><select id="${f.id}" name="${f.id}" class="select-field">
       <option value="">Seleccione...</option>
-      ${f.options.map(o => `<option value="${escapeHtml(o)}">${escapeHtml(o)}</option>`).join('')}
+      ${options.map(o => `<option value="${escapeHtml(o)}">${escapeHtml(o)}</option>`).join('')}
     </select></div>`;
   }
-  return `<div class="field${full}"><label>${f.label}${required}</label><input name="${f.id}" type="${f.type || 'text'}" /></div>`;
+
+  return `<div class="field${full}"><label for="${f.id}">${f.label}${required}</label><input id="${f.id}" name="${f.id}" type="${f.type || 'text'}" /></div>`;
+}
+
+function normalizeLabel(value) {
+  return String(value || '')
+    .trim()
+    .replace(/\s+/g, ' ')
+    .toUpperCase();
 }
 
 function longField(label) {
