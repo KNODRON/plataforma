@@ -3,21 +3,36 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SACE | Plataforma de Análisis Criminal</title>
+  <title>S.A.C.E. | Plataforma de Análisis Criminal</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <section id="loginView" class="login-view">
-    <div class="login-overlay"></div>
     <article class="login-card">
       <div class="shield">OS.9</div>
       <p class="eyebrow">Departamento OS.9 · Análisis e Inteligencia Criminal</p>
       <h1>Sistema de Análisis Criminal Estratégico</h1>
-      <p class="muted">Ingreso institucional para registro, consulta y análisis de fenómenos criminales.</p>
-      <label>Usuario</label>
-      <input id="userInput" type="text" placeholder="usuario.institucional" />
-      <label>Contraseña</label>
-      <input type="password" placeholder="••••••••" />
+      <p class="muted">Ingreso simulado por perfil para probar flujos de trabajo.</p>
+
+      <div class="login-grid">
+        <div>
+          <label for="userInput">Usuario</label>
+          <input id="userInput" type="text" placeholder="usuario.institucional" />
+        </div>
+        <div>
+          <label for="passInput">Contraseña</label>
+          <input id="passInput" type="password" placeholder="••••••••" />
+        </div>
+      </div>
+
+      <label for="profileSelect">Perfil de acceso</label>
+      <select id="profileSelect">
+        <option value="analista">Analista OS.9</option>
+        <option value="guardia">Guardia</option>
+        <option value="jefatura">Jefatura</option>
+        <option value="admin">Administrador</option>
+      </select>
+
       <button id="loginBtn" class="primary">Ingresar</button>
       <small>Versión funcional de prueba. No ingresar datos sensibles reales.</small>
     </article>
@@ -29,6 +44,10 @@
         <div class="shield small">OS.9</div>
         <div><strong>S.A.C.E.</strong><span>Análisis Criminal Estratégico</span></div>
       </div>
+      <div class="profile-box">
+        <span id="activeProfileLabel">Perfil</span>
+        <strong id="activeUserLabel">Usuario</strong>
+      </div>
       <nav id="moduleNav"></nav>
       <button id="logoutBtn" class="ghost">Cerrar sesión</button>
     </aside>
@@ -36,14 +55,14 @@
     <section class="workspace">
       <header class="topbar">
         <div>
-          <p class="eyebrow">Departamento OS.9</p>
+          <p class="eyebrow" id="contextEyebrow">Departamento OS.9</p>
           <h2 id="moduleTitle">Secuestro</h2>
           <p id="moduleSubtitle">Nuevo registro · Formulario de ingreso</p>
         </div>
-        <div class="actions">
+        <div class="actions" id="actionBar">
           <button id="newCaseBtn">Nuevo registro</button>
           <button id="saveBtn">Guardar local</button>
-          <button id="exportBtn">Exportar JSON</button>
+          <button id="exportBtn" class="technical-action">Exportar JSON</button>
           <button id="clearBtn" class="danger">Limpiar</button>
         </div>
       </header>
@@ -53,6 +72,10 @@
     </section>
   </main>
 
+  <script src="data/opciones.js"></script>
+  <script src="data/perfiles.js"></script>
+  <script src="js/modules/secuestro.js"></script>
+  <script src="js/modules/concurrencias.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
