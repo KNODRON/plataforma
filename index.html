@@ -1,81 +1,64 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>S.A.C.E. | Plataforma de Análisis Criminal</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>S.A.C.E. - Plataforma de Análisis Criminal</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <section id="loginView" class="login-view">
-    <article class="login-card">
-      <div class="shield">OS.9</div>
-      <p class="eyebrow">Departamento OS.9 · Análisis e Inteligencia Criminal</p>
-      <h1>Sistema de Análisis Criminal Estratégico</h1>
-      <p class="muted">Ingreso simulado por perfil para probar flujos de trabajo.</p>
-
-      <div class="login-grid">
+    <div class="login-card">
+      <div class="brand-row">
+        <div class="logo-box">OS.9</div>
         <div>
-          <label for="userInput">Usuario</label>
-          <input id="userInput" type="text" placeholder="usuario.institucional" />
-        </div>
-        <div>
-          <label for="passInput">Contraseña</label>
-          <input id="passInput" type="password" placeholder="••••••••" />
+          <div class="eyebrow">Departamento OS.9 · Análisis e Inteligencia Criminal</div>
+          <h1>Sistema de Análisis Criminal Estratégico</h1>
         </div>
       </div>
-
-      <label for="profileSelect">Perfil de acceso</label>
-      <select id="profileSelect">
-        <option value="analista">Analista OS.9</option>
-        <option value="guardia">Guardia</option>
-        <option value="jefatura">Jefatura</option>
-        <option value="admin">Administrador</option>
-      </select>
-
-      <button id="loginBtn" class="primary">Ingresar</button>
-      <small>Versión funcional de prueba. No ingresar datos sensibles reales.</small>
-    </article>
+      <p class="muted">Ingreso simulado por perfil para probar flujos de trabajo.</p>
+      <form id="loginForm">
+        <div class="grid two">
+          <label>Usuario<input id="loginUser" value="juan.jimenezv@carabineros.cl" autocomplete="username"></label>
+          <label>Contraseña<input id="loginPass" type="password" value="123456" autocomplete="current-password"></label>
+        </div>
+        <label>Perfil de acceso
+          <select id="profileSelect">
+            <option value="admin">Administrador</option>
+            <option value="analista">Analista OS.9</option>
+            <option value="guardia">Guardia</option>
+            <option value="jefatura">Jefatura</option>
+          </select>
+        </label>
+        <button type="submit" class="btn primary full">Ingresar</button>
+      </form>
+      <p class="note">Versión funcional de prueba. No ingresar datos sensibles reales.</p>
+    </div>
   </section>
 
   <main id="appView" class="app hidden">
     <aside class="sidebar">
-      <div class="brand">
-        <div class="shield small">OS.9</div>
+      <div class="side-brand">
+        <div class="logo-box">OS.9</div>
         <div><strong>S.A.C.E.</strong><span>Análisis Criminal Estratégico</span></div>
       </div>
-      <div class="profile-box">
-        <span id="activeProfileLabel">Perfil</span>
-        <strong id="activeUserLabel">Usuario</strong>
-      </div>
-      <nav id="moduleNav"></nav>
-      <button id="logoutBtn" class="ghost">Cerrar sesión</button>
+      <nav id="sideMenu" class="side-menu"></nav>
+      <button id="logoutBtn" class="btn ghost side-bottom">Cerrar sesión</button>
     </aside>
 
     <section class="workspace">
       <header class="topbar">
         <div>
-          <p class="eyebrow" id="contextEyebrow">Departamento OS.9</p>
-          <h2 id="moduleTitle">Secuestro</h2>
-          <p id="moduleSubtitle">Nuevo registro · Formulario de ingreso</p>
+          <div class="eyebrow">Departamento OS.9</div>
+          <h2 id="pageTitle">Secuestro</h2>
+          <p id="pageSub" class="muted">Nuevo registro · Formulario de ingreso</p>
         </div>
-        <div class="actions" id="actionBar">
-          <button id="newCaseBtn">Nuevo registro</button>
-          <button id="saveBtn">Guardar local</button>
-          <button id="exportBtn" class="technical-action">Exportar JSON</button>
-          <button id="clearBtn" class="danger">Limpiar</button>
-        </div>
+        <div id="topActions" class="actions"></div>
       </header>
-
-      <section id="dashboard" class="dashboard-view hidden"></section>
-      <form id="caseForm" class="form-shell hidden"></form>
+      <div id="content"></div>
     </section>
   </main>
 
-  <script src="data/opciones.js"></script>
-  <script src="data/perfiles.js"></script>
-  <script src="js/modules/secuestro.js"></script>
-  <script src="js/modules/concurrencias.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
