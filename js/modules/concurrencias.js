@@ -82,7 +82,7 @@ window.SACE_CONCURRENCIAS = (() => {
     const delito = container.querySelector('[name="delito"]');
     const status = container.querySelector('.status-pill');
     if (delito) delito.addEventListener('change', () => {
-      if (status) status.textContent = delito.value === 'SECUESTRO' ? 'Deriva a Secuestro' : 'Ingreso preliminar';
+      if (status) status.textContent = delito.value === 'SECUESTRO' ? 'GUARDAR CONCURRENCIA' : 'Ingreso preliminar';
     });
   }
 
